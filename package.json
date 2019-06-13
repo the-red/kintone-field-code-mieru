@@ -1,5 +1,5 @@
 {
-  "name": "kintone-field-code-chrome-extension",
+  "name": "kintone-field-code-mieru",
   "version": "0.0.1",
   "description": "A boilerplate to chrome extension with webpack",
   "scripts": {
