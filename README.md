@@ -1,4 +1,6 @@
-# フィールドコード見えるくん
+# フィールドコード見えるくん
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
@@ -17,3 +19,7 @@ https://github.com/t-kojima/kintone-field-code-mieru/releases/
 拡張アイコンをクリックするとみえる。もう一回押すとみえない。
 
 ![みえる](https://user-images.githubusercontent.com/5755813/59427083-cbba8700-8e14-11e9-9798-23176c408dff.png)
+
+## Licence
+
+MIT License.
