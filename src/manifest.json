@@ -1,8 +1,11 @@
 {
   "name": "フィールドコード見えるくん！",
+  "description": "Kintoneのフィールドコードが見えるくん",
+  "version": "1.0",
+  "manifest_version": 2,
   "browser_action": {
     "default_title": "クリックすると見えるくん！",
-    "default_icon": "icon-34.png"
+    "default_icon": "icon-32.png"
   },
   "background": {
     "scripts": ["background.bundle.js"]
@@ -10,7 +13,6 @@
   "icons": {
     "128": "icon-128.png"
   },
-  "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "content_scripts": [
     {
