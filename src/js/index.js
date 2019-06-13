@@ -1,6 +1,10 @@
-const fields = Object.values(
-  window.cybozu.data.page.FORM_DATA.schema.table.fieldList
-)
+const fields = [
+  ...Object.values(cybozu.data.page.FORM_DATA.schema.table.fieldList),
+  ...Object.values(cybozu.data.page.FORM_DATA.schema.subTable),
+  ...Object.values(cybozu.data.page.FORM_DATA.schema.subTable)
+    .map(_ => _.fieldList)
+    .reduce((x, y) => [...x, ...Object.values(y)], [])
+]
 
 fields.forEach(({ id, type, var: fieldCode }) => {
   const [element] = document.getElementsByClassName(`field-${id}`)
