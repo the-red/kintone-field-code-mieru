@@ -1,10 +1,10 @@
-const fields = [
+const fields = cybozu.data.page.FORM_DATA ? [
   ...Object.values(cybozu.data.page.FORM_DATA.schema.table.fieldList),
   ...Object.values(cybozu.data.page.FORM_DATA.schema.subTable),
   ...Object.values(cybozu.data.page.FORM_DATA.schema.subTable)
     .map(_ => _.fieldList)
     .reduce((x, y) => [...x, ...Object.values(y)], [])
-]
+] : []
 
 const addMieruElements = () => {
   fields.forEach(({ id, type, var: fieldCode }) => {
@@ -17,6 +17,11 @@ const addMieruElements = () => {
   })
 }
 
-new MutationObserver(() => { addMieruElements() }).observe(document.getElementById('record-gaia'), {childList: true});
+const recordGaia = document.getElementById('record-gaia')
+
+recordGaia &&
+  new MutationObserver(() => {
+    addMieruElements()
+  }).observe(recordGaia, { childList: true })
 
 addMieruElements()

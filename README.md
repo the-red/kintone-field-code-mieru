@@ -6,9 +6,7 @@ kintoneのフィールドコードが見えるChrome拡張
 
 ## Installation
 
-`mieru-kun.crx` をChromeにドロップしてインストール
-
-https://github.com/t-kojima/kintone-field-code-mieru/releases/
+[Chromeウェブストア](https://chrome.google.com/webstore/detail/%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%82%B3%E3%83%BC%E3%83%89%E8%A6%8B%E3%81%88%E3%82%8B%E3%81%8F%E3%82%93%EF%BC%81/hgeiddmainfjlchncbkodkmgjhdnnggb)からインストール
 
 ## Usage
 
