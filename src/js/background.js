@@ -3,7 +3,7 @@ import '../img/icon-32.png'
 
 let hidden = true
 
-chrome.browserAction.onClicked.addListener(function(tab) {
-  chrome.tabs.sendMessage(tab.id, hidden);
+chrome.browserAction.onClicked.addListener(function (tab) {
+  chrome.tabs.sendMessage(tab.id, hidden)
   hidden = !hidden
-});
+})
