@@ -17,7 +17,7 @@
     "style-loader": "^2",
     "webpack": "^4",
     "webpack-cli": "^4",
-    "webpack-dev-server": "^4",
+    "webpack-dev-server": "^3",
     "write-file-webpack-plugin": "^4"
   }
 }
