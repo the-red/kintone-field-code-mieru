@@ -4,7 +4,7 @@ import { crx, defineManifest } from '@crxjs/vite-plugin';
 const manifest = defineManifest({
   manifest_version: 3,
   name: 'フィールドコード見えるくん！',
-  version: '1.1.0',
+  version: '1.1.1',
   description: 'Kintoneのフィールドコードが見えるくん',
   action: {
     default_title: 'クリックすると見えるくん！',
