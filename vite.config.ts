@@ -4,13 +4,13 @@ import { crx, defineManifest } from '@crxjs/vite-plugin';
 const manifest = defineManifest({
   manifest_version: 3,
   name: 'フィールドコード見えるくん！',
-  version: '1.1.1',
+  version: '1.1.2',
   description: 'Kintoneのフィールドコードが見えるくん',
   action: {
     default_title: 'クリックすると見えるくん！',
     default_icon: 'src/img/icon-32.png',
   },
-  host_permissions: ['<all_urls>'],
+  host_permissions: ['https://*.cybozu.com/*'],
   background: {
     service_worker: 'src/background.ts',
   },
@@ -20,7 +20,7 @@ const manifest = defineManifest({
   },
   content_scripts: [
     {
-      matches: ['https://*.cybozu.com/k/*'],
+      matches: ['https://*.cybozu.com/*'],
       run_at: 'document_end',
       js: ['src/content.ts'],
     },
@@ -28,11 +28,11 @@ const manifest = defineManifest({
   web_accessible_resources: [
     {
       resources: ['src/index.js'],
-      matches: ['<all_urls>'],
+      matches: ['https://*.cybozu.com/*'],
     },
     {
       resources: ['*.ts', '*.js', '*.css'],
-      matches: ['<all_urls>'],
+      matches: ['https://*.cybozu.com/*'],
     },
   ],
 });
@@ -46,6 +46,7 @@ export default defineConfig({
   server: {
     port: 5173,
     strictPort: true,
+    cors: true,
     hmr: {
       port: 5173,
     },
